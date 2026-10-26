@@ -1,13 +1,17 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>DnD - Charakterbogen</title>
 </head>
 <style>
     * {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 10px;
+    }
+    small {
+        font-size: 8px;
+        color: gray;
     }
     .vstack {
         display: flex;
@@ -19,17 +23,17 @@
     }
     input {
         width: 100%;
-        height: 20px;
+        height: 25px;
         box-sizing: border-box;
         border: 1px solid grey;
-        border-radius: 2px;
-        margin-top: 5px;;
+        border-radius: 5px;
+        margin-top: 2px;;
     }
     input + input {
         margin-top: 1px;
     }
     input.large {
-        height: 42px;
+        height: 52px;
     }
     input.medium {
         height: 40px;
@@ -37,18 +41,17 @@
     }
     input.small {
         padding: 0px;
-        width: 20px;
-        
+        width: 25px;
     }
     p {
-        padding-top: 9px;
-        padding-bottom: 1px;
+        padding-top: 10px;
+        padding-bottom: 5px;
         margin: 0px;
     }
     table {
         width: 100%;
         border-collapse: collapse;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     .table input {
         background-color: white;
@@ -61,7 +64,10 @@
         background-color: white;
     }
     .padding td {
-        padding: 10px 10px 10px 10px;
+        padding: 8px 8px 8px 8px;
+    }
+    .width-5 {
+        width: 5%;
     }
     .width-10 {
         width: 10%;
@@ -75,13 +81,16 @@
     .width-33 {
         width: 33%;
     }
+    .width-40 {
+        width: 40%;
+    }
     .width-50 {
         width: 50%;
     }
     .background-color {
         background-color: #e0e0e0;
         border-radius: 10px;
-        padding: 10px;
+        padding: 5px;
         margin-right: 10px;
     }
     .align-right {
@@ -109,308 +118,341 @@
     
 </style>
 <body>
+    <p style="padding-top: 50px;">Name</p>
     <table class="background-color padding">
         <tr>
-            <td>Name<input></td>
             <td>Klasse<input></td>
             <td>Volk<input></td>
             <td>Gesinnung<input></td>
-            
+            <td>XP <input class="large" style="height: 40px;;"></td>
+            <td>Stufe <input class="medium"></td>
+            <td>Magier&#8209;Stufe <input class="medium"></td>
         </tr>
     </table>
+    <table>
+        <tr>
+            <td>
+                <div class="background-color">
+                    <div class="vstack">
+                        <div style="writing-mode: sideways-lr; text-orientation: mixed; text-align: right;"><b>Stärke</b></div>
+                        <div class="width-20"><input><input class="large"><input placeholder="RW:"></div>
+                        <div class="width-10 align-right">
+                            <input class="small">
+                            
+                        </div>
+                        <div class="width-50">
+                            <p>Athletik</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="background-color">
+                    <div class="vstack">
+                        <div style="writing-mode: sideways-lr; text-orientation: mixed; text-align: right;"><b>Geschicklichkeit</b></div>
+                        <div class="width-20"><input><input class="large"><input placeholder="RW:"></div>
+                        <div class="width-10 align-right">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                        </div>
+                        <div class="width-50">
+                            <p>Akrobatik</p>
+                            <p>Fingerfertigkeit</p>
+                            <p>Heimlichkeit</p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="background-color">
+                    <div class="vstack">
+                        <div style="writing-mode: sideways-lr; text-orientation: mixed; text-align: right;"><b>Konstitution</b></div>
+                        <div class="width-20"><input><input class="large"><input placeholder="RW:"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr>
+            <td>
+                <div class="background-color">
+                    <div class="vstack">
+                        <div style="writing-mode: sideways-lr; text-orientation: mixed; text-align: right;"><b>Intelligenz</b></div>
+                        <div class="width-20"><input><input class="large"><input placeholder="RW:"></div>
+                        <div class="width-10 align-right">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                        </div>
+                        <div class="width-50">
+                            <p>Arkana</p>
+                            <p>Geschichte</p>
+                            <p>Nachforschung</p>
+                            <p>Natur</p>
+                            <p>Religion</p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="background-color">
+                    <div class="vstack">
+                        <div style="writing-mode: sideways-lr; text-orientation: mixed; text-align: right;"><b>Weisheit</b></div>
+                        <div class="width-20"><input><input class="large"><input placeholder="RW:"></div>
+                        <div class="width-10 align-right">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                            
+                        </div>
+                        <div class="width-50">
+                            <p>Heilen</p>
+                            <p>Menschenkenntnis</p>
+                            <p>Tiere</p>
+                            <p>Überleben</p>
+                            <p>Passive&nbsp;Wahrnehmung</p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="background-color">
+                    <div class="vstack">
+                        <div style="writing-mode: sideways-lr; text-orientation: mixed; text-align: right;"><b>Charisma</b></div>
+                        <div class="width-20"><input><input class="large"><input placeholder="RW:"></div>
+                        <div class="width-10 align-right">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                            <input class="small">
+                        </div>
+                        <div class="width-50">
+                            <p>Auftreten</p>
+                            <p>Einschüchtern</p>
+                            <p>Täuschen</p>
+                            <p>Überzeugen</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="width-50 float-left padding-right-20">
+        <table class="background-color padding">
+            <tr>
+                <td>Gegenstand</td>
+                <td>Menge</td>
+                <td>Gewicht (kg)</td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr class="table">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="width-50 float-left">
+        <table class="background-color padding">
+            <tr>
+                <td>Goldmünzen<input class="large"><small>1 GM = 10 SM = 10 €</small></td>
+                <td>Silbermünzen<input class="large"><small>1 SM = 10 KM = 1€</small></td>
+                <td>Kupfermünzen<input class="large"><small>1 KM = 0,10€</small></td>
+            </tr>
+        </table>
+    </div>
+    <div class="width-50 float-left">
+        <h1>Übung</h1>
+        <table class="background-color padding">
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            <tr class="table"><td></td><td></td></tr>
+            
+        </table>
+    </div>
+    <div style="clear: both;"></div>
+    
+    <h1 style="page-break-before: always;">Kampf</h1>
     <table class="background-color padding">
         <tr>
             <td>Initiative <input class="medium"></td>
             <td>RK <input class="medium"></td>
             <td>Schild <input class="medium"></td>
             <td>Bewegung <input class="medium"></td>
-            <td>Übungsbonus <input class="medium"></td>
             <td>Inspiration <input class="medium"></td>
-            <td>XP <input class="large"></td>
-            <td>Stufe <input class="medium"></td>
-            <td>Magier&#8209;Stufe <input class="medium"></td>
+            <td>Übungsbonus <input class="medium"></td>
+            <td>Resistenz<input class="large"></td>
+            <td>Immunität<input class="large"></td>
         </tr>
-    </tr>
-</table>
-<table class="background-color padding">
-    <tr>
-        <td>Trefferpunkte: Maximal<input class="large" placeholder=""></td>
-        <td>Aktuell<input class="large" placeholder=""></td>
-        <td>Temporär<input class="large" placeholder=""></td>
-        <td>Trefferwürfel<input class="large" placeholder="       x"></td>
-        <td>Todesrettungswürfe<input class="large" placeholder="   0 0 0    |   0 0 0"></td>
-    </tr>
-</table>
-<table>
-    <tr>
-        <td>
-            <div class="background-color">
-                <b>Stärke</b>
-                <div class="vstack">
-                    <div class="width-20"><input class="large"><input></div>
-                    <div class="width-10 align-right">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                    </div>
-                    <div class="width-50">
-                        <p>Athletik</p>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <p><b>Rettungswurf</b></p>
-                    </div>
-                </div>
-            </div>
-        </td>
-        <td>
-            <div class="background-color">
-                <b>Geschicklichkeit</b>
-                <div class="vstack">
-                    <div class="width-20"><input class="large"><input></div>
-                    <div class="width-10 align-right">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                    </div>
-                    <div class="width-50">
-                        <p>Akrobatik</p>
-                        <p>Fingerfertigkeit</p>
-                        <p>Heimlichkeit</p>
-                        <p><b>Rettungswurf</b></p>
-                    </div>
-                </div>
-            </div>
-        </td>
-        <td>
-            <div class="background-color">
-                <b>Konstitution</b>
-                <div class="vstack">
-                    <div class="width-20"><input class="large"><input></div>
-                    <div class="width-10 align-right">
-                        <input class="small hidden">
-                        <input class="small hidden">
-                        <input class="small hidden">
-                        <input class="small">
-                    </div>
-                    <div class="width-50">
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <p>&nbsp;</p>
-                        <p><b>Rettungswurf</b></p>
-                    </div>
-                </div>
-            </div>
-        </td>
-    </tr>
-    <tr><td>&nbsp;</td></tr>
-    <tr>
-        <td>
-            <div class="background-color">
-                <b>Intelligenz</b>
-                <div class="vstack">
-                    <div class="width-20"><input class="large"><input></div>
-                    <div class="width-10 align-right">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                    </div>
-                    <div class="width-50">
-                        <p>Arkana</p>
-                        <p>Geschichte</p>
-                        <p>Natur</p>
-                        <p>Religion</p>
-                        <p><b>Rettungswurf</b></p>
-                    </div>
-                </div>
-            </div>
-        </td>
-        <td>
-            <div class="background-color">
-                <b>Weisheit</b>
-                <div class="vstack">
-                    <div class="width-20"><input class="large"><input>
-                        <div style="height: 7px;"></div>Passiv<input></div>
-                    <div class="width-10 align-right">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                    </div>
-                    <div class="width-50">
-                        <p>Heilen</p>
-                        <p>Menschenkenntnis</p>
-                        <p>Tiere</p>
-                        <p>Überleben</p>
-                        <p><b>Rettungswurf</b></p>
-                    </div>
-                </div>
-            </div>
-        </td>
-        <td>
-            <div class="background-color">
-                <b>Charisma</b>
-                <div class="vstack">
-                    <div class="width-20"><input class="large"><input></div>
-                    <div class="width-10 align-right">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                        <input class="small">
-                    </div>
-                    <div class="width-50">
-                        <p>Auftreten</p>
-                        <p>Einschüchtern</p>
-                        <p>Täuschen</p>
-                        <p>Überzeugen</p>
-                        <p><b>Rettungswurf</b></p>
-                    </div>
-                </div>
-            </div>
-        </td>
-    </tr>
-</table>
-
-<table class="background-color padding">
-    <tr>
-        <td style="width: 40%;">Waffe</td>
-        <td style="width: 10%;">Angriffsbonus</td>
-        <td style="width: 20%;">Schaden</td>
-        <td style="width: 10%;">Reichweite&nbsp;(m)</td>
-        <td style="width: 20%;">Sonstiges</td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
+    </table>
+    <table class="background-color padding">
+        <tr>
+            <td>Trefferpunkte:&nbsp;Maximal<input class="large" placeholder=""></td>
+            <td>Aktuell<input class="large" placeholder=""></td>
+            <td>Temporär<input class="large" placeholder=""></td>
+            <td>Trefferwürfel<input class="large" placeholder="       x"></td>
+            <td>Todesrettungswürfe<input class="large" placeholder="   0 0 0    |   0 0 0"></td>
+        </tr>
+    </table>
     
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-<table class="background-color padding">
-    <tr>
-        <td>Angriffsbonus<input class="large"></td>
-        <td>Rettungswurf-SG<input class="large"></td>
-        <td>Plätze<input class="large" placeholder="1:      2:      3:      4:      5:      6:      7:      8:"></td>
-    </tr>
-    <tr>
-        <td style="width: 5%;">Grad</td>
-        <td style="width: 20%;">Zauber</td>
-        <td style="width: 40%;">Beschreibung</td>
-        <td style="width: 10%;">Reichweite&nbsp;(m)</td>
-        <td style="width: 10%;">Schaden</td>
-        <td style="width: 10%;">Dauer</td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="table">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-
-<h2>Bonusaktionen</h2>
-<input class="" style="height: 100px;"></td>
-<br>
-<br>
-<div class="width-50 float-left padding-right-20">
     <table class="background-color padding">
         <tr>
-            <td>Gegenstand</td>
-            <td>Menge</td>
-            <td>Gewicht (kg)</td>
+            <td style="width: 30%;">Waffe</td>
+            <td style="width: 5%;">Angriffsbonus</td>
+            <td style="width: 5;">Schaden</td>
+            <td style="width: 5%;">Reichweite&nbsp;(m)</td>
+            <td style="width: 40%;">Sonstiges</td>
         </tr>
         <tr class="table">
             <td></td>
             <td></td>
-            <td></td>
-        </tr>
-        <tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="table">
             <td></td>
             <td></td>
             <td></td>
@@ -419,87 +461,205 @@
             <td></td>
             <td></td>
             <td></td>
-        </tr>
-        <tr class="table">
-            <td></td>
             <td></td>
             <td></td>
         </tr>
-        <tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr><tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr class="table">
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-</div>
-
-<div class="width-50 float-left">
-    <table class="background-color padding">
-        <tr>
-            <td>Goldmünzen<input class="large"></td>
-            <td>Silbermünzen<input class="large"></td>
-            <td>Kupfermünzen<input class="large"></td>
-        </tr>
-    </table>
-    <h1>Übung</h1>
-    <table class="background-color padding">
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
-        <tr class="table"><td></td><td></td></tr>
         
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
     </table>
-</div>
-
-
+    
+    
+    
+    <table class="background-color padding">
+        <tr>
+            <td colspan="2">Angriffsbonus<input></td>
+            <td colspan="2">Rettungswurf-SG<input></td>
+            <td colspan="3">Plätze<input placeholder="1:      2:      3:      4:      5:      6:      7:      8:"></td>
+        </tr>
+        <tr>
+            <td class="width-10">Grad</td>
+            <td class="width-10">Komponenten</td>
+            <td class="width-10">Reichweite&nbsp;(m)</td>
+            <td class="width-10">Dauer</td>
+            <td class="width-10">Schaden</td>
+            <td class="width-10">Aufstieg</td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="table">
+            <td colspan="2"></td>
+            <td colspan="3"></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    <h2>Bonusaktionen</h2>
 </body>
 </html>
